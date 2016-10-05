@@ -45,6 +45,13 @@
             <artifactId>hystrix-dashboard</artifactId>
             <version>${hystrix.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.netflix.hystrix</groupId>
+            <artifactId>hystrix-rx-netty-metrics-stream</artifactId>
+            <version>${hystrix.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>com.codahale.metrics</groupId>
             <artifactId>metrics-graphite</artifactId>

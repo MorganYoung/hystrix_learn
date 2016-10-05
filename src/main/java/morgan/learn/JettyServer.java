@@ -22,7 +22,7 @@ public class JettyServer {
                 @Override
                 public void run() {
                     try{
-                        server = new Server(8080);
+                        server = new Server(8088);
                         WebAppContext webAppContext = new WebAppContext();
                         webAppContext.setContextPath("/");
                         webAppContext.addServlet(HystrixMetricsStreamServlet.class, "/hys.stream");
@@ -73,13 +73,13 @@ public class JettyServer {
             System.out.println("result = " + result);
             System.out.println("mainThread = " + Thread.currentThread().getName());
 
-            HelloWorldWithFalllCommand helloWorldWithFalllCommand = new HelloWorldWithFalllCommand("test fall");
+            /*HelloWorldWithFalllCommand helloWorldWithFalllCommand = new HelloWorldWithFalllCommand("test fall");
             result = helloWorldWithFalllCommand.execute();
             System.out.println(result);
 
             CommandWithFallBackWiaNetWork cmd = new CommandWithFallBackWiaNetWork(1);
             System.out.println(cmd.execute());
-
+*/
             Thread.sleep(1000);
         }
     }
